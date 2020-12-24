@@ -2684,9 +2684,12 @@ mp4_parser_process_moov_atom_callback(void* ctx, atom_info_t* atom_info)
 	switch (metadata_parse_context.media_info.media_type)
 	{
 	case MEDIA_TYPE_VIDEO:
-		vod_log_debug3(VOD_LOG_INFO, context->request_context->log, 0,
-			"metadata_parse_context.media_info.format: format - media type %uD format 0x%uxD object type id 0x%uxD",
+		vod_log_error(VOD_LOG_WARN, log, 0,
+			"XXXXXXX: format - media type %uD format 0x%uxD object type id 0x%uxD",
 			metadata_parse_context.media_info.media_type, metadata_parse_context.media_info.format, (uint32_t)metadata_parse_context.media_info.u.audio.object_type_id);
+		// vod_log_debug3(VOD_LOG_INFO, context->request_context->log, 0,
+		// 	"metadata_parse_context.media_info.format: format - media type %uD format 0x%uxD object type id 0x%uxD",
+		// 	metadata_parse_context.media_info.media_type, metadata_parse_context.media_info.format, (uint32_t)metadata_parse_context.media_info.u.audio.object_type_id);
 		switch (metadata_parse_context.media_info.format)
 		{
 		case FORMAT_AVC1:
