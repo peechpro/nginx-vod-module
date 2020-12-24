@@ -74,6 +74,9 @@
 // av1 4cc tags
 #define FORMAT_AV1     (0x31307661)
 
+// png 4cc tags
+#define FORMAT_PNG     (0x7634706d)
+
 // audio 4cc tags
 #define FORMAT_MP4A    (0x6134706d)
 #define FORMAT_AC3     (0x332d6361)
