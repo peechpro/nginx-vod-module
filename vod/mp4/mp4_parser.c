@@ -2685,7 +2685,7 @@ mp4_parser_process_moov_atom_callback(void* ctx, atom_info_t* atom_info)
 	{
 	case MEDIA_TYPE_VIDEO:
 	
-		vod_log_error(VOD_LOG_ERR, request_context->log, 0,
+		vod_log_error(VOD_LOG_ERR, context->request_context->log, 0,
 			"XXXXXXX: format - media type %uD format 0x%uxD object type id 0x%uxD",
 			metadata_parse_context.media_info.media_type, metadata_parse_context.media_info.format, (uint32_t)metadata_parse_context.media_info.u.audio.object_type_id);
 			
