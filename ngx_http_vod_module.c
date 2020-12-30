@@ -1795,7 +1795,7 @@ ngx_http_vod_identify_format(ngx_http_vod_ctx_t* ctx, ngx_str_t* buffer)
 			{
 				ctx->cur_source->reader->get_path(ctx->cur_source->reader_context, &path);
 				ngx_log_error(NGX_LOG_ERR, ctx->submodule_context.request_context.log, 0,
-					"ngx_http_vod_identify_format: failed to identify the file format %V", &path);
+					"ngx_http_vod_identify_format: failed to identify the file format XXX %V", &path);
 			}
 			return ngx_http_vod_status_to_ngx_error(ctx->submodule_context.r, VOD_BAD_DATA);
 		}
