@@ -589,12 +589,12 @@ mkv_metadata_reader_read(
 		data_pos = position->pos + context.cur_pos - start_pos;
 		if (data_pos + size > offset + buffer->len)
 		{
-			if (state->state >= MRS_READ_SECTION_DATA && state->section == initial_section)
-			{
-				vod_log_error(VOD_LOG_ERR, state->request_context->log, 0,
-					"mkv_metadata_reader_read: truncated file (2)");
-				return VOD_BAD_DATA;
-			}
+			// if (state->state >= MRS_READ_SECTION_DATA && state->section == initial_section)
+			// {
+			// 	vod_log_error(VOD_LOG_ERR, state->request_context->log, 0,
+			// 		"mkv_metadata_reader_read: truncated file (2)");
+			// 	return VOD_BAD_DATA;
+			// }
 
 			state->state = MRS_READ_SECTION_DATA;
 			result->read_req.read_offset = position->pos;
